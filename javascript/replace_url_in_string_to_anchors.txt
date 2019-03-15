@@ -1,0 +1,4 @@
+const STRING = 'some string with google.com address and https://dev.aljaxus.eu URL'
+
+const urlReg = /((https?:\/\/)?([a-z0-9\.\-]*)\.([a-z0-9]{2,9})(\:[0-9]{1,5})?(\/[^\/\?#]+)?(\?[^\/\?#]+)?(\#[^\/\?#]+)?)/ig
+const msgWithUrl = STRING.replace(urlReg, '<a href="$1" target="blank">$2$3.$4</a>')
